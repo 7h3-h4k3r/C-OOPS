@@ -1,15 +1,16 @@
 CC:= gcc 
+CFLAG = -g 
 
 Source_file := main
 
 OBJ_REMOVE := $(wildcard *.o)
 
-main:main.o
-	$(CC) $(CFLAG_OUT) $(Source_file) main.o
-	@make install --no-print-directory
+# main:main.o
+# 	$(CC) $(CFLAG_OUT) $(Source_file) main.o
+# 	@make install --no-print-directory
 
-main.o:main.c
-	$(CC) $(CFLAG_OBJ) main.c
+main:main.o
+	
 
 install:
 	@printf "Installing a Source Code\n"

@@ -1,4 +1,5 @@
-#include "bank_account.c"
+#include<stdio.h>
+#include "bank_account.h"
 int 
 main()
 {
@@ -6,4 +7,5 @@ main()
  __init__(&ac);
  ac.deposit(&ac,ac.get_Data(&ac));
  ac.show_balance(&ac);
+ 
 }
