@@ -3,7 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
-#include "bank_account.h"
+#include "../includes/strct_header.h"
 
 float _balance(acc_t *a)
  {

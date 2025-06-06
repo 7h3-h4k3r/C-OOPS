@@ -1,0 +1,15 @@
+CC=gcc
+CFLAGS=-g
+BUILD_DIR=build
+SRC_DIR=src
+OBJECTS = $(patsubst %.c, %.o, $(subst src/,, $(wildcard $(SRC_DIR)/*.c)))
+all: $(OBJECTS)
+	echo $(OBJECTS)
+	cd $(BUILD_DIR) && $(CC) $^ -o superpower
+
+$(OBJECTS): %.o: $(SRC_DIR)/%.c
+	$(CC) -c $^ -o $(BUILD_DIR)/$@
+
+
+clean:
+	rm -rf main *.o a.out *.i *.s build/*

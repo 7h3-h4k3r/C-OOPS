@@ -1,5 +1,5 @@
 CC:= gcc 
-CFLAG = -g 
+CFLAGS = -g 
 
 Source_file := main
 
@@ -9,9 +9,7 @@ OBJ_REMOVE := $(wildcard *.o)
 # 	$(CC) $(CFLAG_OUT) $(Source_file) main.o
 # 	@make install --no-print-directory
 
-main:main.o
-	
-
+main : main.o bank_account.o
 install:
 	@printf "Installing a Source Code\n"
 	@printf "Usage : make run\n"

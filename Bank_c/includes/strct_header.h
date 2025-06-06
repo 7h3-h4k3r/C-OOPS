@@ -19,4 +19,5 @@ typedef struct acc_t
  void _deposit(acc_t *a, float data);
  void _show_balance(acc_t *a);
  void __init__(acc_t *a);
+ int super_power(int);
 #endif
